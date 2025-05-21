@@ -1,0 +1,11 @@
+{
+  "importOrder": ["^@oddbit-player/(.*)$", "<THIRD_PARTY_MODULES>", "^[./]"],
+  "importOrderSortSpecifiers": true,
+  "importOrderCaseInsensitive": true,
+  "importOrderParserPlugins": ["typescript", "decorators", "jsx"],
+  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+  "printWidth": 120,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all"
+}

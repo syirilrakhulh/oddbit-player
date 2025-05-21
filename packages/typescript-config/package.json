@@ -1,0 +1,10 @@
+{
+  "name": "@oddbit-player/typescript-config",
+  "description": "Oddbit Player base typescript configuration.",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  }
+}

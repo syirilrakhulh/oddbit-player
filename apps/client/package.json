@@ -1,0 +1,35 @@
+{
+  "name": "@oddbit-player/client",
+  "description": "Oddbit Player client app",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "react-router build",
+    "check-types": "react-router typegen && tsc --noEmit",
+    "dev": "react-router dev",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@react-router/node": "^7.5.3",
+    "@react-router/serve": "^7.5.3",
+    "isbot": "^5.1.27",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^7.5.3"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^7.5.3",
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/node": "^20",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "class-variance-authority": "^0.7.1",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.3",
+    "vite-plugin-devtools-json": "^0.1.0",
+    "vite-plugin-svgr": "^4.3.0",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}
