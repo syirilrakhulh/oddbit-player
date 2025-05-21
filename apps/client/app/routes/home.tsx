@@ -25,7 +25,7 @@ export const clientLoader = async ({ request }: Route.ClientLoaderArgs) => {
   const url = new URL(request.url);
   const page = parseInt(url.searchParams.get('page') || '1', 10);
 
-  const res = await fetch(`http://localhost:3000/api/video?page=${page}`);
+  const res = await fetch(`${import.meta.env.VITE_SERVER_HOST}/api/video?page=${page}`);
   if (!res.ok) throw new Error('Failed to fetch videos');
   const data: VideoResponse = await res.json();
   return data;

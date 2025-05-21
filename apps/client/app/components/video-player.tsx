@@ -232,7 +232,7 @@ const VideoPlayer = ({ videoId, autoPlay = false }: VideoPlayerProps) => {
     const fetchVideo = () => {
       if (!videoRef.current) return;
 
-      videoRef.current.src = `http://localhost:3000/api/video/${videoId}`;
+      videoRef.current.src = `${import.meta.env.VITE_SERVER_HOST}/api/video/${videoId}`;
       videoRef.current.load();
       videoRef.current.muted = isMuted;
       videoRef.current.volume = volume;

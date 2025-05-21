@@ -28,11 +28,17 @@ Start the server
   npm run serve
 ```
 
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file on apps/client
+
+`VITE_SERVER_HOST`
+
 ## API Reference
 
 #### Get all items
 
-```http
+```
   GET /api/video
 ```
 
@@ -42,7 +48,7 @@ Start the server
 
 #### Get item
 
-```http
+```
   GET /api/items/${id}
 ```
 
