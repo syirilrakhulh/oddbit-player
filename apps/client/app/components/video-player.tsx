@@ -192,6 +192,7 @@ const VideoPlayer = ({ videoId, autoPlay = false }: VideoPlayerProps) => {
 
         canvasRef.current.width = videoWidth;
         canvasRef.current.height = videoHeight;
+        canvasRef.current.className = ['m-auto', videoWidth > videoHeight ? 'w-full h-fit' : 'w-fit h-full'].join(' ');
 
         gl.viewport(0, 0, videoWidth, videoHeight);
       };
@@ -370,13 +371,13 @@ const VideoPlayer = ({ videoId, autoPlay = false }: VideoPlayerProps) => {
     <div
       ref={containerRef}
       onClick={isMobile ? () => setForceShowPlayerControl(true) : undefined}
-      className={`group relative overflow-hidden rounded-lg bg-black ${isFullscreen ? 'fixed inset-0 z-50' : 'aspect-video w-full'}`}
+      className={`group relative flex overflow-hidden rounded-lg bg-black ${isFullscreen ? 'fixed inset-0 z-50' : 'aspect-video w-full'}`}
     >
       {/* Hidden video element for video stream */}
       <video ref={videoRef} className="oddbit-player hidden" playsInline crossOrigin="anonymous" />
 
       {/* Canvas for WebGL rendering */}
-      <canvas ref={canvasRef} className="m-auto h-full w-fit" />
+      <canvas ref={canvasRef} />
 
       {/* Video id watermark */}
       <div className="pointer-events-none absolute top-4 left-4 z-1 rounded border border-white/50 bg-white/25 px-1 py-0.5 text-xs text-white">
